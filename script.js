@@ -1,5 +1,5 @@
 import { CardItem } from "./components/CardItem.js";
-import { CardItem } from "./components/FormComponent.js";
+import { FormComponent } from "./components/FormComponent.js";
 const { createApp, ref } = Vue;
 
 const vm = createApp({
@@ -15,7 +15,22 @@ const vm = createApp({
     increase(id) {
       console.log("Increase likes for post with id:", id);
       const post = this.postLike.find((post) => post.id === id);
-      post.likes += 1;
+      post.like += 1;
+    },
+    handleSubmit(title, content) {
+      console.log(
+        "Submitting form with title: ",
+        title,
+        "and content: ",
+        content
+      );
+      const newPost = {
+        id: this.postList.length + 1,
+        title: title,
+        content: content,
+        img_url: "https://picsum.photos/200/300",
+      };
+      this.postList.push(newPost);
     },
   },
   mounted() {

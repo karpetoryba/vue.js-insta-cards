@@ -15,6 +15,7 @@ export const CardItem = {
     <button v-on:click="increase(id)">
       {{like}} Like {{like > 0 ? "s" : ""}}
     </button>
+ 
   </li>
   `,
   methods: {
