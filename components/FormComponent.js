@@ -1,10 +1,4 @@
 export const FormComponent = {
-  data() {
-    return {
-      title: "",
-      content: "",
-    };
-  },
   props: {
     handlesubmit: Function,
   },
@@ -15,9 +9,9 @@ export const FormComponent = {
     };
   },
   template: `
-   <form @submit.prevent="handleSubmit(title, content)"> 
-   <input type="text" placeholder="title" v-model="title">
-   <input type="text" placeholder="content"v-model="content">
-   <input type="submit " value="Submit">
+   <form @submit.prevent="handlesubmit(title, content)"> 
+    <input type="text" placeholder="title" v-model="title">
+    <input type="text" placeholder="content" v-model="content">
+    <input type="submit" value="Submit">
    </form>`,
 };
