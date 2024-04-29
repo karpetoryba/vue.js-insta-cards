@@ -1,4 +1,5 @@
-import { CardItem } from "./CardItem.js";
+import { CardItem } from "./components/CardItem.js";
+import { CardItem } from "./components/FormComponent.js";
 const { createApp, ref } = Vue;
 
 const vm = createApp({
